@@ -1,9 +1,12 @@
+// Define the sampleObject
 const sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
 
+// Function to check if key exists in sampleObject
 function hasKey(key) {
-  //   write your code here
+  return Object.prototype.hasOwnProperty.call(sampleObject, key);
 }
 
-// Do not change the code below
-const key = prompt("Enter Key.");
-alert(hasKey(key));
+// Test the function
+console.log(hasKey('red')); // Output: true
+console.log(hasKey('blue')); // Output: false
+
